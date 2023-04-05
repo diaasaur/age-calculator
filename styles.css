@@ -1,0 +1,71 @@
+:root {
+	--ff: 'Poppins', sans-serif;
+	--mobile: 375px;
+	--desktop: 1440px;
+
+	/* colors */
+	--purple: hsl(259, 100%, 65%);
+	--light-red: hsl(0, 100%, 67%);
+	--white: hsl(0, 0%, 100%);
+	--off-white: hsl(0, 0%, 94%);
+	--light-grey: hsl(0, 0%, 86%);
+	--smokey-grey: hsl(0, 1%, 44%);
+	--off-black: hsl(0, 0%, 8%);
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	flex-grow: 1;
+	font-family: var(--ff);
+	background-color: var(--off-white);
+	color: var(--off-black);
+}
+
+button,
+input {
+	font: inherit;
+}
+
+/* hiding number's up and down arrows */
+/* https://bugzilla.mozilla.org/show_bug.cgi?id=1355521 */
+
+input[type='number'] {
+	-webkit-appearance: none;
+	-moz-appearance: textfield;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+input[aria-invalid='true'] {
+	outline: none;
+	border: 1px solid var(--light-red);
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* error messages */
+.hint {
+	color: var(--light-red);
+}
