@@ -39,7 +39,7 @@
 							data-max="31"
 							name="day"
 							id="day"
-							pattern="[0-9]+"
+							pattern="^[0-9]+$"
 						/>
 						<small class="hint" id="day__hint"></small>
 					</p>
@@ -55,7 +55,7 @@
 							data-max="12"
 							name="month"
 							id="month"
-							pattern="[0-9]+"
+							pattern="^[0-9]+$"
 						/>
 						<small class="hint" id="month__hint"></small>
 					</p>
@@ -69,7 +69,7 @@
 							placeholder="YYYY"
 							name="year"
 							id="year"
-							pattern="[0-9]+"
+							pattern="^[0-9]{4}$"
 						/>
 						<small class="hint" id="year__hint"></small>
 					</p>
@@ -86,7 +86,7 @@
 				</button>
 			</div>
 			<div class="card__bottom">
-				<ul class="age-list">
+				<ul class="age-list" role="list">
 					<li class="age"><span id="age__years">--</span> years</li>
 					<li class="age"><span id="age__months">--</span> months</li>
 					<li class="age"><span id="age__days">--</span> days</li>
